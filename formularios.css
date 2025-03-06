@@ -1,0 +1,132 @@
+*{
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(45deg, #e30d51, #cc23ff, #19aff0, #15ffa5);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+h1{
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    text-align: center;
+}
+
+.formulario{
+    background-color: #fff;
+    width: 350px;
+    height: 450px;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.formulario form{
+    /*background-color: #cc23ff;*/
+    margin: auto;
+    margin-top: 8%;
+    padding: 10px;
+    width: 250px;
+    height: 280px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    }
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.formulario form input{
+    width: 220px;
+    height: 30px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario form textarea{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario form p{
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.formulario .botoes{
+    /*background-color: #F52E2E;*/
+    width: 200px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+
+.formulario .botoes button{
+    text-align: center;
+    font-size: 20px;
+    height: 25px;
+    border: none;
+    background-color: #07ff1b;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.formulario .botoes button:hover{
+    color: white;
+    background-color: blueviolet;
+    height: 35px;
+    font-size: 25px;
+    transition: 0.5s;
+}
+
+.formulario #emailSpan{
+    color: #F52E2E;
+    font-size: 20px;
+}
+
+.formulario #senhaSpan{
+    color: #F52E2E;
+    font-size: 20px;
+
+}
+
+.formulario #confirmSenhaSpan{
+    color: #F52E2E;
+    font-size: 20px;
+}
+
+
+.formulario .corCampoVazio{
+    border: 2px solid #F52E2E;
+}
+
+.formulario .corCampoCheio {
+    border: 2px solid #00C22B;
+}

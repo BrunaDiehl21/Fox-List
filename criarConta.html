@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Login</title>
+    <link rel="stylesheet" href="./formularios.css">
+</head>
+<body>
+    <div class="formulario">
+        <form id="form">
+            <h1>Crie sua conta!</h1>
+            <div>
+                <input type="email" name="emailUser" id="email" placeholder="Email *"> <br>
+                <span id="emailSpan" style="visibility: hidden;" >Campo obrigatório</span>
+            </div>
+
+            <div>
+                <input type="password" name="senhaUser" id="senha" placeholder="Senha *"> <br>
+                <span id="senhaSpan" style="visibility: hidden;" >Campo obrigatório</span>
+            </div>
+
+            <div>
+                <input type="password" name="senhaUser" id="confirmSenha" placeholder="Confirmar senha *"> <br>
+                <span id="confirmSenhaSpan" style="visibility: hidden;" >Campo obrigatório</span>
+            </div>
+
+            <p>*Campos obrigatórios </p> <br><br>
+
+        </form>
+
+        <div class="botoes">
+            <button id="btnEntrar">Entrar</button>
+
+            <button id="pagLogin" onclick="login()">Fazer login</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+    <script src="./verificarCampos.js"></script>
+
+</body>
+</html>
