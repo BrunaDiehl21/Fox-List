@@ -108,20 +108,23 @@ input::-webkit-inner-spin-button{
 
 .formulario #emailSpan{
     color: #F52E2E;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .formulario #senhaSpan{
     color: #F52E2E;
-    font-size: 20px;
-
+    font-size: 18px;
 }
 
 .formulario #confirmSenhaSpan{
     color: #F52E2E;
-    font-size: 20px;
+    font-size: 18px;
 }
 
+.formulario #confirmSenhaSpan2{
+    color: #F52E2E;
+    font-size: 18px;
+}
 
 .formulario .corCampoVazio{
     border: 2px solid #F52E2E;

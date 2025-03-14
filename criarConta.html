@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina Login</title>
+    <title>Pagina Criar Conta</title>
     <link rel="stylesheet" href="./formularios.css">
 </head>
 <body>
@@ -11,18 +11,19 @@
         <form id="form">
             <h1>Crie sua conta!</h1>
             <div>
-                <input type="email" name="emailUser" id="email" placeholder="Email *"> <br>
+                <input type="email" name="emailUser" onchange="verificarInputsCriarConta()" id="criarEmail" placeholder="Email *"> <br>
                 <span id="emailSpan" style="visibility: hidden;" >Campo obrigatório</span>
             </div>
 
             <div>
-                <input type="password" name="senhaUser" id="senha" placeholder="Senha *"> <br>
+                <input type="password" name="senhaUser" onchange="verificarInputsCriarConta()" id="criarSenha" placeholder="Senha *"> <br>
                 <span id="senhaSpan" style="visibility: hidden;" >Campo obrigatório</span>
             </div>
 
             <div>
-                <input type="password" name="senhaUser" id="confirmSenha" placeholder="Confirmar senha *"> <br>
-                <span id="confirmSenhaSpan" style="visibility: hidden;" >Campo obrigatório</span>
+                <input type="password" name="senhaUser" onchange="verificarInputsCriarConta()" id="confirmSenha" placeholder="Confirmar senha *"> <br>
+                <span id="confirmSenhaSpan" style="visibility: hidden;" >Campo obrigatório</span> <br>
+                <span id="confirmSenhaSpan2" style="visibility: hidden;" >As senhas precisam ser iguais</span>
             </div>
 
             <p>*Campos obrigatórios </p> <br><br>
@@ -30,7 +31,7 @@
         </form>
 
         <div class="botoes">
-            <button id="btnEntrar">Entrar</button>
+            <button id="btnEntrar2">Entrar</button>
 
             <button id="pagLogin" onclick="login()">Fazer login</button>
         </div>

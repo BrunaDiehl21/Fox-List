@@ -11,12 +11,12 @@
         <form id="form">
             <h1>É bom te ver de novo!</h1>
             <div>
-                <input type="email" name="emailUser" id="email" placeholder="Email *"> <br>
+                <input type="email" name="emailUser" onchange="verificarInputsLogin()" id="email" placeholder="Email *"> <br>
                 <span id="emailSpan" style="visibility: hidden;" >Campo obrigatório</span>
             </div>
 
             <div>
-                <input type="password" name="senhaUser" id="senha" placeholder="Senha *"> <br>
+                <input type="password" name="senhaUser" onchange="verificarInputsLogin()" id="senha" placeholder="Senha *"> <br>
                 <span id="senhaSpan" style="visibility: hidden;" >Campo obrigatório</span>
             </div>
 
@@ -24,13 +24,30 @@
 
         </form>
         <div class="botoes">
-            <button id="btnEntrar">Entrar</button>
+            <button id="btnEntrar1" onclick="fazerLogin()">Entrar</button>
             <button id="pagCriarConta" onclick="registrar()">Criar conta</button>
         </div>
     </div>
     
     <script src="./index.js"></script>
     <script src="./verificarCampos.js"></script>
+
+
+    <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-auth-compat.js"></script>
+
+    <script>
+        const firebaseConfig = {
+    apiKey: "AIzaSyASdWixEjx58x1DaSClT91UbOR3hkNSuYo",
+    authDomain: "fox-list-4f7e8.firebaseapp.com",
+    projectId: "fox-list-4f7e8",
+    storageBucket: "fox-list-4f7e8.firebasestorage.app",
+    messagingSenderId: "1033048280531",
+    appId: "1:1033048280531:web:fcbe5cd9d3e4e19494b326"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    </script>
 
 </body>
 </html>
