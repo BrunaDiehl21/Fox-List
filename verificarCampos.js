@@ -13,6 +13,12 @@ const spanDeConfirmSenha2 = document.getElementById('confirmSenhaSpan2');
 const botaoEntrarLogin = document.getElementById('btnEntrar1');
 //const botaoEntrarCriarConta = document.getElementById('btnEntrar2');
 
+firebase.auth().onAuthStateChanged(user => {
+    if(user) {
+        window.location.href = "./home.html";
+    }
+})
+
 function fazerLogin(){
     firebase.auth().signInWithEmailAndPassword(emailUser.value, senhaUser.value ).then(response => {
         window.location.href = "./home.html";
@@ -21,6 +27,77 @@ function fazerLogin(){
     });
 }
 
+function logout(){
+    firebase.auth().signOut().then(() => {
+        window.location.href = "./index.html";
+    }).catch(() => {
+        alert('Ocorreu um erro ao fazer logout')
+    })
+}
+
+function registrarUser(){
+    const email = document.getElementById('criarEmail').value;
+    const password = document.getElementById('criarSenha').value;
+
+    firebase.auth().createUserWithEmailAndPassword(
+        email,password
+    ).then(() => {
+        window.location.href = "./home.html";
+    }).catch(error => {
+        alert(erroCriarConta(error))
+    })
+}
+
+function erroCriarConta(error){
+    if (error.code == "auth/email-already-in-use"){
+        return 'Email já está em uso!'
+    }
+    return error.message;
+}
+
+function mostrarSenha(){
+    var senhaLogin = document.getElementById('senha');
+    var btnOlho = document.getElementById('olhoSenha')
+
+    if (senhaLogin.type === 'password'){
+        senhaLogin.setAttribute('type','text')
+        btnOlho.classList.replace('bi-eye', 'bi-eye-slash')
+    }
+    else{
+        senhaLogin.setAttribute('type','password')
+        btnOlho.classList.replace('bi-eye-slash', 'bi-eye')
+    }
+
+}
+
+function mostrarSenha2(){
+    var criarSenha = document.getElementById('criarSenha');
+    var btnOlho2 = document.getElementById('olhoSenha2')
+
+    if (criarSenha.type === 'password'){
+        criarSenha.setAttribute('type','text')
+        btnOlho2.classList.replace('bi-eye', 'bi-eye-slash')
+    }
+    else{
+        criarSenha.setAttribute('type','password')
+        btnOlho2.classList.replace('bi-eye-slash', 'bi-eye')
+    }
+
+}
+
+function mostrarSenha3(){
+    var confirmSenhaOlho = document.getElementById('confirmSenha');
+    var btnOlho3 = document.getElementById('olhoSenha3')
+
+if (confirmSenhaOlho.type === 'password'){
+    confirmSenhaOlho.setAttribute('type','text')
+    btnOlho3.classList.replace('bi-eye', 'bi-eye-slash')
+    }
+else{
+    confirmSenhaOlho.setAttribute('type','password')
+    btnOlho3.classList.replace('bi-eye-slash', 'bi-eye')
+    }
+}
 function verificarInputsLogin(){
     
     if (emailUser.value.trim() === "") {

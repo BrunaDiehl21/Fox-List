@@ -74,6 +74,42 @@ input::-webkit-inner-spin-button{
     text-align: center;
 }
 
+.formulario form .inputSenha{
+    position: relative;
+}
+
+.formulario form .inputSenha i{
+    font-size: 28px;
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    cursor: pointer;
+}
+
+.formulario form .inputCriarSenha{
+    position: relative;
+}
+
+.formulario form .inputCriarSenha i{
+    font-size: 28px;
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    cursor: pointer;
+}
+
+.formulario form .inputConfirmSenha{
+    position: relative;
+}
+
+.formulario form .inputConfirmSenha i{
+    font-size: 28px;
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    cursor: pointer;
+}
+
 .formulario .botoes{
     /*background-color: #F52E2E;*/
     width: 200px;
