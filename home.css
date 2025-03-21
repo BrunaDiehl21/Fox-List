@@ -10,10 +10,9 @@ body{
     background-color: #2f384d;
 }
 
-
 .cabecalhoFoxList{
     position: sticky;
-    top: 0;
+    margin-top: 0;
     display: flex;
     justify-content: space-between;
 }
@@ -54,10 +53,12 @@ body{
 .navbar button{
     position: relative;
     width: 120px;
+    height: 40px;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 15px;
+    padding-top: 8px;
     text-align: start;
     font-size: 25px;
     transition: 0.3s;
@@ -69,7 +70,7 @@ body{
     font-size: 30px;
     position: absolute;
     cursor: pointer;
-    top: 32%;
+    top: 25%;
     right: 3%;
 }
 
@@ -81,8 +82,86 @@ body{
 }
 
 h2{
+    margin-right: 100px;
     color: #fff;
     text-align: center;
     font-size: 50px;
-    
+    display: flex;
+    justify-content: center;
+}
+
+.tasks {
+    display: grid;
+    grid-template-areas: "imagem lista";
+}
+
+.tasks .imagemRaposa img {
+    grid-area: imagem;
+}
+.raposaTask{
+    width: 250px;
+    height: 250px;
+    margin-top: 45%;
+    margin-left: 30px;
+    padding: 0;
+}
+
+.tasks .lista ol{
+    grid-area: lista;
+    list-style: none;
+    margin-right: 50%;
+    padding: 0;
+    margin-right: 320px;
+}
+
+.tasks .lista ol li{
+    width: 400px;
+    cursor: pointer;
+    padding: 10px 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #2f384d ;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.botao button.fab{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 2px rgb(28, 28, 28);
+    font-size: 35px;
+    position: absolute;
+    bottom: 40px;
+    right: 350px;
+    transition: 0.5s;
+}
+
+.botao button.fab:hover{
+    background-color: rgb(181, 250, 111) ;
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.tasks .lista ol li.completo{
+    background-color: rgb(77, 188, 77);
+} 
+
+.tasks .lista ol li.emAndamento{
+    background-color: rgb(244, 236, 125);
+} 
+
+.tasks .lista ol li.pendente{
+    background-color: rgb(232, 82, 82);
+} 
+
+.tasks .lista ol li:hover{
+    scale: 1.2;
+    transition: 0.5s;
+}
+
+.tasks .lista p{
+    margin: 4px 0;
 }
