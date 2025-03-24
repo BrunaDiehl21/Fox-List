@@ -58,15 +58,6 @@ input::-webkit-inner-spin-button{
     cursor: pointer;
 }
 
-.formulario form textarea{
-    width: 100px;
-    height: 30px;
-    font-size: 20px;
-    border: 2px solid black;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 .formulario form p{
     font-family: "Roboto", sans-serif;
     font-size: 18px;
@@ -121,7 +112,6 @@ input::-webkit-inner-spin-button{
     margin: 0 auto;
     gap: 15px;
 }
-
 
 .formulario .botoes button{
     text-align: center;

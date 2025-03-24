@@ -171,11 +171,6 @@ function verificarInputsCriarConta(){
 
 }
 
-//botaoEntrarLogin.addEventListener('click', verificarInputsLogin);
-
-
-//botaoEntrarCriarConta.addEventListener('click', verificarInputsCriarConta);
-
 form.addEventListener('submit', e => {
     e.preventDefault();
 });

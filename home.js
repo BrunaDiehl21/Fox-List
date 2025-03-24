@@ -12,6 +12,10 @@ firebase.auth().onAuthStateChanged(user => {
     }
 })
 
+function newTask(){
+    window.location.href = "./task.html";
+}
+
 function encontrarTasks(user){
     firebase.firestore()
     .collection('tarefas')

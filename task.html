@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Task</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+
+<body>
+<div class="formularioTask">
+    <form id="newTask">
+        <div class="nomeTask">
+            <div><label>Nome da Tarefa *</label></div>
+            <input type="text" id="name">
+        </div>
+
+        <div class="statusTask">
+            <div><label>Status *</label></div>
+                <input type="radio" name="status" checked id="pendente"> <label for="pendente">Pendente</label>
+                <input type="radio" name="status" id="completo"> <label for="completo">Completo</label>
+        </div>
+
+        <div class="dataTask">
+            <div><label>Data *</label></div>
+            <input type="date" id="date">
+        </div>
+
+        <div class="Task">
+            <div><label>Descrição</label></div>
+            <textarea id="descriptionTask"></textarea>
+        </div>
+        <p>*Campo obrigatório</p>
+    </form>
+
+    <div class="botoesTask">
+        <button id="salvar" onclick="salvarTask()" >Salvar</button>
+
+        <button id="cancelar" onclick="cancelarTask()">Cancelar</button>
+    </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore-compat.js"></script>
+
+<script src="./firebase-init.js"></script>
+
+<script src="./task.js"></script>
+
+</body>
+
+</html>

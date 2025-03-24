@@ -149,12 +149,8 @@ h2{
     background-color: rgb(77, 188, 77);
 } 
 
-.tasks .lista ol li.emAndamento{
-    background-color: rgb(244, 236, 125);
-} 
-
 .tasks .lista ol li.pendente{
-    background-color: rgb(232, 82, 82);
+    background-color: rgb(233, 171, 71);
 } 
 
 .tasks .lista ol li:hover{
@@ -164,4 +160,114 @@ h2{
 
 .tasks .lista p{
     margin: 4px 0;
+}
+
+@media (min-width: 1024px){
+    .cabecalho h1{
+        right: 20px;
+    }
+
+    .navbar button{
+        position: relative;
+        width: 130px;
+        height: 40px;
+    }
+
+    .navbar #iconSair{
+        font-size: 30px;
+        position: absolute;
+        cursor: pointer;
+        top: 25%;
+        right: 2%;
+    }
+    .tasks .lista ol li{
+        width: 500px;
+        font-size: 20px;
+    }
+
+    .raposaTask{
+        width: 280px;
+        height: 280px;
+        margin-top: 45%;
+        margin-left: 50%;
+        padding: 0;
+    }
+
+    .botao button.fab{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 2px 2px 2px rgb(28, 28, 28);
+        font-size: 45px;
+        position: absolute;
+        bottom: 80px;
+        right: 800px;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width: 765px){
+
+    .cabecalhoFoxList{
+        position: sticky;
+        margin-top: 0;
+    }
+    .raposaTask{
+        width: 110px;
+        height: 110px;
+        margin-top: 550%;
+        margin-left: 40%;
+        padding: 0;
+    }
+
+    .cabecalhoFoxList h1{
+        font-size: 20px;
+    }
+
+    .cabecalhoFoxList h2{
+        margin-top: 40px;
+        font-size: 30px;
+    }
+
+    .navbar button{
+        position: relative;
+        width: 110px;
+        height: 40px;
+        right: 60px;
+        margin-top: 30px;
+    }
+
+    .navbar #iconSair{
+        font-size: 30px;
+        position: absolute;
+        cursor: pointer;
+        top: 45%;
+        right: 5%;
+    }
+
+    .tasks .lista ol{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tasks .lista ol li{
+        width: 250px;
+        font-size: 20px;
+        margin: 2px;
+    }
+    
+    .botao button.fab{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 2px 2px 2px rgb(28, 28, 28);
+        font-size: 45px;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        transition: 0.5s;
+    }
 }
