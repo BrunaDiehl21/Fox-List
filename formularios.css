@@ -13,7 +13,7 @@ body{
 }
 
 h1{
-    font-family: "Caveat", cursive;
+    font-family: "Open Sans", sans-serif;
     font-size: 30px;
     text-align: center;
 }
@@ -59,10 +59,11 @@ input::-webkit-inner-spin-button{
 }
 
 .formulario form p{
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
+    margin-top: 5px;
 }
 
 .formulario form .inputSenha{

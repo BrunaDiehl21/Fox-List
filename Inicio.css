@@ -32,7 +32,8 @@ body{
 }
 
 .cabecalho h1{
-    font-family: "Caveat", cursive;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
     font-size: 40px;
     color: #fff;
     margin: 0;
@@ -89,7 +90,7 @@ body{
 }
 
 .inicio .textos h2{
-    font-family: "Poppins" , sans-serif;
+    font-family: "Boldonse" , sans-serif;
     font-weight: 600;
     font-size: 45px;
     text-align: center;
@@ -111,4 +112,39 @@ body{
     padding: 10px;
     margin-top: 10px;
     margin-right: 50px;
+}
+
+@media(min-width: 1024px){
+    .inicio{
+        margin-top: 140px;
+    }
+}
+
+@media(max-width: 765px){
+
+    .inicio{
+        display: grid;
+        grid-template-areas: "textos"
+                            "imagem"
+    }
+
+    .inicio .textos h2{
+        font-size: 30px;
+        margin-right: 60px;
+    }
+    
+    .inicio .textos h3{
+        font-size: 24px;
+        padding: 30px;
+        margin-bottom: 2px;
+        margin-right: 60px;
+    }
+
+    .inicio .imagem img{
+        position: absolute;
+        width: 400px;
+        height: 300px;
+        margin-left: 50px;
+        bottom: 70px;
+    }
 }
