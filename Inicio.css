@@ -122,10 +122,25 @@ body{
 
 @media(max-width: 765px){
 
+    .cabecalho img{
+        margin-top: 20px;
+    }
+
     .inicio{
         display: grid;
         grid-template-areas: "textos"
                             "imagem"
+    }
+
+    .navbar ul{
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar button{
+        font-size: 20px;
+        display: flex;
+        align-items: center;
     }
 
     .inicio .textos h2{

@@ -238,7 +238,7 @@ button.corDeletar {
         font-size: 30px;
         position: absolute;
         cursor: pointer;
-        top: 18%;
+        top: 17%;
         right: 2%;
     }
     .tasks .lista ol li{
@@ -270,15 +270,21 @@ button.corDeletar {
 
 @media (max-width: 765px){
 
+    body{
+        overflow: hidden;
+    }
+
     .cabecalhoFoxList{
         position: sticky;
         margin-top: 0;
+        margin-bottom: 0;
     }
+
     .raposaTask{
         width: 110px;
         height: 110px;
         margin-top: 550%;
-        margin-left: 40%;
+        margin-left: 20%;
         padding: 0;
     }
 
@@ -303,20 +309,24 @@ button.corDeletar {
         font-size: 30px;
         position: absolute;
         cursor: pointer;
-        top: 45%;
-        right: 5%;
+        top: 40%;
+        right: 12%;
     }
 
     .tasks .lista ol{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 480px;
     }
 
     .tasks .lista ol li{
-        width: 250px;
+        width: 170px;
         font-size: 20px;
         margin: 2px;
+        margin-left: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     
     .botao button.fab{
