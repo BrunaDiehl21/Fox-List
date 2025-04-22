@@ -114,7 +114,7 @@ body{
     margin-right: 50px;
 }
 
-@media(min-width: 1024px){
+@media(min-width: 1400px){
     .inicio{
         margin-top: 140px;
     }

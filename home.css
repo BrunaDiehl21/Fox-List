@@ -37,7 +37,8 @@ body{
     margin: 0;
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 35px;
+    top: 5px;
 }
 
 .cabecalhoFoxList h2{
@@ -64,8 +65,9 @@ body{
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     text-decoration: none;
-    padding: 15px;
-    padding-top: 8px;
+    padding: 5px;
+    margin-top: 55px;
+    right: 30px;
     text-align: start;
     font-size: 25px;
     transition: 0.3s;
@@ -77,7 +79,7 @@ body{
     font-size: 30px;
     position: absolute;
     cursor: pointer;
-    top: 25%;
+    top: 44%;
     right: 3%;
 }
 
@@ -108,15 +110,15 @@ h2{
 .raposaTask{
     width: 250px;
     height: 250px;
-    margin-top: 45%;
+    margin-top: 35%;
     margin-left: 30px;
     padding: 0;
 }
 
 .tasks .lista ol{
     grid-area: lista;
-    width: 700px;
-    height: 650px;
+    width: 650px;
+    height: 350px;
     list-style: none;
     margin-right: 300px;
     padding: 0;
@@ -137,12 +139,12 @@ h2{
 
 
 .tasks .lista ol li{
-    font-size: 35px;
+    font-size: 25px;
     font-family: "Roboto", sans-serif;
     width: 400px;
     cursor: pointer;
     padding: 10px 16px;
-    margin-left: 80px;
+    margin-left: 180px;
     margin-top: 20px;
     margin-bottom: 20px;
     border: 1px solid #2f384d ;
@@ -160,7 +162,7 @@ h2{
     font-size: 35px;
     position: absolute;
     bottom: 40px;
-    right: 350px;
+    right: 250px;
     transition: 0.5s;
 }
 
@@ -212,7 +214,7 @@ button.corDeletar {
     display: none;
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1400px){
     .cabecalhoFoxList h1{
         font-size: 30px;
         right: 20px;

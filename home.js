@@ -8,7 +8,11 @@ function logoutHome(){
 
 firebase.auth().onAuthStateChanged(user => {
     if(user){
-        encontrarTasks(user);
+        const userId = user.uid;
+        encontrarTasks(userId);
+    }
+    else if(!user){
+        window.location.href = "./login.html";
     }
 })
 
@@ -16,10 +20,10 @@ function newTask(){
     window.location.href = "./task.html";
 }
 
-function encontrarTasks(user){
+function encontrarTasks(userId){
     firebase.firestore()
     .collection('tarefas')
-    .where('user.uid', '==', user.uid)
+    .where('userId', '==', userId)
     .orderBy('date', 'desc')
     .get()
     .then(resposta => {

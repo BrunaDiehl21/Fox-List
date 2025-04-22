@@ -59,6 +59,7 @@ function salvarTask(){
     else{
         update(tarefa);
     }
+
 }
 
 function salvar(tarefa){
@@ -71,6 +72,7 @@ function salvar(tarefa){
     .catch(() => {
         alert('Ocorreu um erro ao salvar a tarefa')
     })
+
 }
 
 function update(tarefa){
@@ -87,6 +89,15 @@ function update(tarefa){
 }
 
 function criarTarefa(){
+    const user = firebase.auth().currentUser;
+
+    if (!user) {
+    console.error("Usuário não autenticado.");
+        return null;
+    }
+
+    const userId = user.uid;
+
     return {
         name: form.name().value,
 
@@ -96,9 +107,7 @@ function criarTarefa(){
 
         descriptionTask: form.descriptionTask().value,
 
-        user: {
-            uid: firebase.auth().currentUser.uid
-        }
+        userId: userId
 
     }
 
