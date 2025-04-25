@@ -13,7 +13,7 @@
     <form id="newTask">
         <div class="nomeTask">
             <div><label>Nome da Tarefa *</label></div>
-            <input type="text" id="name">
+            <input type="text" id="name" onchange="verificarCamposTask()">
         </div>
 
         <div class="statusTask">
@@ -24,7 +24,7 @@
 
         <div class="dataTask">
             <div><label>Data *</label></div>
-            <input type="date" id="date">
+            <input type="date" id="date" onchange="verificarCamposTask()">
         </div>
 
         <div class="Task">
@@ -35,7 +35,7 @@
     </form>
 
     <div class="botoesTask">
-        <button id="salvar" onclick="salvarTask()" >Salvar</button>
+        <button id="salvar" onclick="salvarTask()" disabled>Salvar</button>
 
         <button id="cancelar" onclick="cancelarTask()">Cancelar</button>
     </div>

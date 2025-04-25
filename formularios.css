@@ -103,7 +103,6 @@ input::-webkit-inner-spin-button{
 }
 
 .formulario .botoes{
-    /*background-color: #F52E2E;*/
     width: 200px;
     height: 80px;
     display: flex;

@@ -65,12 +65,13 @@ function pegarDadosTask(tarefa){
         form.descriptionTask().value = tarefa.descriptionTask;
     }
 
+    verificarCamposTask();
 }
 
 function salvarTask(){
     const tarefa = criarTarefa();
     
-    if(isNewTask()){
+    if(isNewTask()){ 
         salvar(tarefa);
     }
     else{
@@ -89,7 +90,6 @@ function salvar(tarefa){
     .catch(() => {
         alert('Ocorreu um erro ao salvar a tarefa')
     })
-
 }
 
 function update(tarefa){
@@ -125,9 +125,21 @@ function criarTarefa(){
         descriptionTask: form.descriptionTask().value,
 
         userId: userId
-
     }
 
+}
+
+function verificarCamposTask() {
+    const nome = form.name().value;
+    const data = form.date().value;
+    const statusMarcado = form.statusPendente().checked || form.statusCompleto().checked;
+    const btnSalvar = document.getElementById('salvar');
+
+    if (nome === "" || data === "" || !statusMarcado) {
+        btnSalvar.disabled = true;
+    } else {
+        btnSalvar.disabled = false;
+    }
 }
 
 form = {

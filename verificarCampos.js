@@ -11,7 +11,6 @@ const spanDeConfirmSenha = document.getElementById('confirmSenhaSpan');
 const spanDeConfirmSenha2 = document.getElementById('confirmSenhaSpan2');
 //Botoes
 const botaoEntrarLogin = document.getElementById('btnEntrar1');
-//const botaoEntrarCriarConta = document.getElementById('btnEntrar2');
 
 firebase.auth().onAuthStateChanged(user => {
     if(user) {
@@ -82,7 +81,6 @@ function mostrarSenha2(){
         criarSenha.setAttribute('type','password')
         btnOlho2.classList.replace('bi-eye-slash', 'bi-eye')
     }
-
 }
 
 function mostrarSenha3(){

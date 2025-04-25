@@ -93,21 +93,9 @@ body{
     background-color: #07ff1b;
 }
 
-.formularioTask .botoesTask button#salvar:hover{
-    height: 30px;
-    font-size: 28px;
-    transition: 0.5s;
-}
-
 .formularioTask .botoesTask button#cancelar{
     color: #fff;
     background-color: rgb(231, 23, 23);
-}
-
-.formularioTask .botoesTask button#cancelar:hover{
-    height: 30px;
-    font-size: 28px;
-    transition: 0.5s;
 }
 
 @media (min-width: 1400){
