@@ -1,15 +1,17 @@
 *{
     border: none;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body{
-    height: 100vh;
-    padding: 0;
-    margin: 0;
     background-image: linear-gradient(45deg, #e30d51, #cc23ff, #19aff0, #15ffa5);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .cabecalho{
@@ -86,7 +88,7 @@ body{
     padding: 10px;
     height: 400px;
     margin-left: 70px;
-    margin-top: 25px;
+    margin-top: 180px;
 }
 
 .inicio .textos h2{
@@ -110,20 +112,36 @@ body{
     width: 500px;
     height: 400px;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 180px;
     margin-right: 50px;
 }
 
-@media(min-width: 1400px){
-    .inicio{
-        margin-top: 140px;
-    }
-}
-
 @media(max-width: 765px){
-
+    .cabecalho{
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        padding-top: 1px;
+        padding-bottom: 0.5px;
+        top: 0px;
+    }
     .cabecalho img{
-        margin-top: 20px;
+        margin-top: 10px;
+    }
+
+    .navbar ul{
+        margin-top: 0;
+        font-size: 18px;
+        gap: 10px;
+        padding: 1px;
+    }
+    
+    .navbar button{
+        padding: 10px;
+        font-size: 20px;
     }
 
     .inicio{
@@ -132,34 +150,33 @@ body{
                             "imagem"
     }
 
-    .navbar ul{
+    .inicio .textos{
+        margin: 0;
+        margin-top: 15px;
+        bottom: 240px;
+        width: 100%;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-    }
-
-    .navbar button{
-        font-size: 20px;
-        display: flex;
-        align-items: center;
+        text-align: center;
     }
 
     .inicio .textos h2{
-        font-size: 30px;
-        margin-right: 60px;
+        font-size: 20px;
     }
     
     .inicio .textos h3{
-        font-size: 24px;
-        padding: 30px;
-        margin-bottom: 2px;
-        margin-right: 60px;
+        font-size: 15px;
+        padding: 20px;
     }
 
     .inicio .imagem img{
-        position: absolute;
-        width: 400px;
-        height: 300px;
-        margin-left: 50px;
-        bottom: 70px;
+        width: 300px;
+        height: 250px;
+        display: block;
+        margin: auto;
     }
+
+
 }

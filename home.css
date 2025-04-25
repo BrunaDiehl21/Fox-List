@@ -19,7 +19,7 @@ body{
 
 .cabecalhoFoxList .logo{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 25px;
     padding: 35px;
     gap: 10px;
@@ -44,6 +44,7 @@ body{
 .cabecalhoFoxList h2{
     font-family: "Caveat", sans-serif;
     font-size: 70px;
+    margin-right: 250px;
 }
 
 .navbar ul{
@@ -79,7 +80,7 @@ body{
     font-size: 30px;
     position: absolute;
     cursor: pointer;
-    top: 44%;
+    top: 10%;
     right: 3%;
 }
 
@@ -110,17 +111,17 @@ h2{
 .raposaTask{
     width: 250px;
     height: 250px;
-    margin-top: 35%;
-    margin-left: 30px;
+    margin-top: 45%;
+    margin-left: 300px;
     padding: 0;
 }
 
 .tasks .lista ol{
     grid-area: lista;
     width: 650px;
-    height: 350px;
+    height: 550px;
     list-style: none;
-    margin-right: 300px;
+    margin-right: 800px;
     padding: 0;
     overflow: hidden;
     overflow-y: scroll;
@@ -161,8 +162,8 @@ h2{
     box-shadow: 2px 2px 2px rgb(28, 28, 28);
     font-size: 35px;
     position: absolute;
-    bottom: 40px;
-    right: 250px;
+    bottom: 140px;
+    right: 850px;
     transition: 0.5s;
 }
 
@@ -214,78 +215,24 @@ button.corDeletar {
     display: none;
 }
 
-@media (min-width: 1400px){
-    .cabecalhoFoxList h1{
-        font-size: 30px;
-        right: 20px;
-        margin-bottom: 25px;
-    }
-
-    .cabecalhoFoxList h2{
-        margin-right: 120px;
-    }
-
-    .cabecalhoFoxList img{
-        width: 90px;
-        height: 90px;
-    }
-
-    .navbar button{
-        position: relative;
-        width: 130px;
-        height: 40px;
-    }
-
-    .navbar #iconSair{
-        font-size: 30px;
-        position: absolute;
-        cursor: pointer;
-        top: 17%;
-        right: 2%;
-    }
-    .tasks .lista ol li{
-        width: 500px;
-        font-size: 20px;
-    }
-
-    .raposaTask{
-        width: 280px;
-        height: 280px;
-        margin-top: 45%;
-        margin-left: 50%;
-        padding: 0;
-    }
-
-    .botao button.fab{
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        border: none;
-        box-shadow: 2px 2px 2px rgb(28, 28, 28);
-        font-size: 45px;
-        position: absolute;
-        bottom: 80px;
-        right: 800px;
-        transition: 0.5s;
-    }
-}
-
 @media (max-width: 765px){
-
     body{
         overflow: hidden;
+        width: 100%;
     }
 
     .cabecalhoFoxList{
+        width: 100%;
+        height: 20%;
         position: sticky;
-        margin-top: 0;
         margin-bottom: 0;
+        margin: 0;
     }
 
     .raposaTask{
         width: 110px;
         height: 110px;
-        margin-top: 550%;
+        margin-top: 450%;
         margin-left: 20%;
         padding: 0;
     }
@@ -301,9 +248,9 @@ button.corDeletar {
 
     .navbar button{
         position: relative;
-        width: 110px;
+        width: 100px;
         height: 40px;
-        right: 60px;
+        right: 90px;
         margin-top: 30px;
     }
 
@@ -311,22 +258,25 @@ button.corDeletar {
         font-size: 30px;
         position: absolute;
         cursor: pointer;
-        top: 40%;
-        right: 12%;
+        top: 10%;
+        right: 5%;
     }
 
     .tasks .lista ol{
+        width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 480px;
+        padding-top: 280px;
+        overflow: hidden;
+        overflow-y: scroll;
     }
 
     .tasks .lista ol li{
-        width: 170px;
+        width: 200px;
         font-size: 20px;
         margin: 2px;
-        margin-left: 50px;
+        margin-left: 10px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
@@ -339,8 +289,126 @@ button.corDeletar {
         box-shadow: 2px 2px 2px rgb(28, 28, 28);
         font-size: 45px;
         position: absolute;
-        bottom: 50px;
+        bottom: 150px;
         right: 50px;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width: 425px){
+    body{
+        overflow: hidden;
+        width: 100vw;
+    }
+
+    .cabecalhoFoxList{
+        width: 100%;
+        height: 20%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        row-gap: 2px;
+    }
+    .cabecalhoFoxList .logo{
+        margin-top: 25px;
+        padding: 5px;
+        gap: 5px;
+        margin-left: 150px;
+    }
+    
+    .cabecalhoFoxList img{
+        width: 40px;
+        height: 40px;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+    
+    .cabecalhoFoxList h1{
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 80px;
+    }
+    
+    .cabecalhoFoxList h2{
+        top: 40px;
+        margin-left: 20px;
+        text-align: center;
+        font-family: "Caveat", sans-serif;
+        font-size: 25px;
+    }
+    
+    .navbar ul{
+        padding: 5px;
+        gap: 5px;
+    }
+    
+    .navbar button{
+        width: 80px;
+        height: 30px;
+        font-size: 20px;
+        top: 20%;
+        position: absolute;
+        right: 20px;
+    }
+    .navbar #iconSair{
+        font-size: 25px;
+        position: absolute;
+        cursor: pointer;
+        top: 10%;
+        right: 5%;
+    }
+    
+
+    .raposaTask{
+        width: 110px;
+        height: 110px;
+        margin-top: 195%;
+        margin-left: 20%;
+        padding: 0;
+    }
+
+    .cabecalhoFoxList h1{
+        font-size: 20px;
+    }
+
+    .cabecalhoFoxList h2{
+        margin-top: 40px;
+        font-size: 30px;
+    }
+
+    .tasks .lista ol{
+        position: absolute;
+        width: 300px;
+        height: 450px;
+        padding-top: 35px;
+        left: 60px;
+        overflow: hidden;
+        overflow-y: scroll;
+        display: flex;
+        align-items: center;
+    }
+
+    .tasks .lista ol li{
+        width: 200px;
+        font-size: 20px;
+        margin: 2px;
+    }
+    
+    .botao button.fab{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: 2px 2px 2px rgb(28, 28, 28);
+        font-size: 45px;
+        position: absolute;
+        bottom: 160px;
+        right: 80px;
         transition: 0.5s;
     }
 }

@@ -1,7 +1,15 @@
-if (!isNewTask()){
-    const uid = pegarUIdTask();
-    encontrarPorUid(uid);
-}
+firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+        if (!isNewTask()) {
+            const userId = user.uid;
+            const uid = pegarUIdTask();
+            encontrarPorUid(uid, userId);
+        }
+    } else {
+        alert("Você precisa estar logado para acessar esta página.");
+        window.location.href = "./index.html";
+    }
+});
 
 function pegarUIdTask(){
     const urlParams = new URLSearchParams(window.location.search);
@@ -12,25 +20,33 @@ function isNewTask(){
     return pegarUIdTask() ? false : true;  
 }
 
-function encontrarPorUid(uid){
+function encontrarPorUid(uid, userId){
     firebase.firestore()
-    .collection('tarefas')
-    .doc(uid)
-    .get()
-    .then(doc => {
-        if(doc.exists){
-            pegarDadosTask(doc.data());
-        }
-        else{
-            alert('Documento não encontrado');
+        .collection('tarefas')
+        .doc(uid)
+        .get()
+        .then(doc => {
+            if (doc.exists) {
+                const data = doc.data();
+
+                if (data.userId === userId) {
+                    pegarDadosTask(data);
+                } else {
+                    alert("Você não tem permissão para acessar esta tarefa.");
+                    window.location.href = "./home.html";
+                }
+            } else {
+                alert('Documento não encontrado');
+                window.location.href = "./home.html";
+            }
+        })
+        .catch((error) => {
+            console.error("Erro ao recuperar documento:", error);
+            alert("Ocorreu um erro ao recuperar documento");
             window.location.href = "./home.html";
-        }
-    })
-    .catch(() => {
-        alert("Ocorreu um erro ao recuperar documento");
-        window.location.href = "./home.html";
-    })
+        });
 }
+
 
 function pegarDadosTask(tarefa){
 
@@ -48,6 +64,7 @@ function pegarDadosTask(tarefa){
     if(tarefa.descriptionTask){
         form.descriptionTask().value = tarefa.descriptionTask;
     }
+
 }
 
 function salvarTask(){
@@ -118,7 +135,7 @@ form = {
     statusPendente: () => document.getElementById('pendente'),
     statusCompleto: () => document.getElementById('completo'),
     date: () => document.getElementById('date'),
-    descriptionTask: () => document.getElementById('descriptionTask')
+    descriptionTask: () => document.getElementById('descriptionTask'),
 }
 
 function cancelarTask(){
