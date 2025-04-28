@@ -138,7 +138,6 @@ h2{
     border-radius: 10px;
 }
 
-
 .tasks .lista ol li{
     font-size: 25px;
     font-family: "Roboto", sans-serif;
@@ -215,10 +214,16 @@ button.corDeletar {
     display: none;
 }
 
-@media (max-width: 765px){
+@media (min-width: 768px) and (max-width: 1024px){
     body{
         overflow: hidden;
         width: 100%;
+    }
+
+    .cabecalhoFoxList img{
+        width: 70px;
+        height: 70px;
+        position: absolute;
     }
 
     .cabecalhoFoxList{
@@ -243,7 +248,8 @@ button.corDeletar {
 
     .cabecalhoFoxList h2{
         margin-top: 40px;
-        font-size: 30px;
+        margin-left: 160px;
+        font-size: 25px;
     }
 
     .navbar button{
@@ -264,10 +270,12 @@ button.corDeletar {
 
     .tasks .lista ol{
         width: 300px;
+        height: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 280px;
+        padding-top: 350px;
+        margin-left: 18%;
         overflow: hidden;
         overflow-y: scroll;
     }
@@ -295,10 +303,12 @@ button.corDeletar {
     }
 }
 
-@media (max-width: 425px){
+
+@media (max-width: 767px){
     body{
         overflow: hidden;
-        width: 100vw;
+        width: 100%;
+        height: 100%;
     }
 
     .cabecalhoFoxList{
@@ -353,7 +363,7 @@ button.corDeletar {
         font-size: 20px;
         top: 20%;
         position: absolute;
-        right: 20px;
+        right: 35px;
     }
     .navbar #iconSair{
         font-size: 25px;
@@ -363,7 +373,6 @@ button.corDeletar {
         right: 5%;
     }
     
-
     .raposaTask{
         width: 110px;
         height: 110px;
@@ -372,28 +381,21 @@ button.corDeletar {
         padding: 0;
     }
 
-    .cabecalhoFoxList h1{
-        font-size: 20px;
-    }
-
-    .cabecalhoFoxList h2{
-        margin-top: 40px;
-        font-size: 30px;
-    }
-
     .tasks .lista ol{
         position: absolute;
         width: 300px;
         height: 450px;
-        padding-top: 35px;
+        padding-top: 40px;
         left: 60px;
         overflow: hidden;
         overflow-y: scroll;
         display: flex;
         align-items: center;
+        flex-direction: column;
     }
 
     .tasks .lista ol li{
+        top: 80px;
         width: 200px;
         font-size: 20px;
         margin: 2px;
@@ -407,7 +409,7 @@ button.corDeletar {
         box-shadow: 2px 2px 2px rgb(28, 28, 28);
         font-size: 45px;
         position: absolute;
-        bottom: 160px;
+        bottom: 120px;
         right: 80px;
         transition: 0.5s;
     }

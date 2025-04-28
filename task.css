@@ -23,6 +23,8 @@ body{
 
 .formularioTask p{
     font-size: 16px;
+    top: 10px;
+    bottom: 2px;
 }
 
 .formularioTask #newTask{
@@ -66,11 +68,6 @@ body{
     resize: none;
 }
 
-.formularioTask p{
-    top: 10px;
-    bottom: 2px;
-}
-
 .formularioTask .botoesTask {
     text-align: center;
     display: flex;
@@ -98,11 +95,81 @@ body{
     background-color: rgb(231, 23, 23);
 }
 
-@media (min-width: 1400){
+
+@media (max-width: 1024px){
     .formularioTask{
-        width: 650px;
-        height: 620px;
+        width: 360px;
+        height: 400px;
         left: 50%;
         top: 50%;
+    }
+
+    .formularioTask p{
+        font-size: 16px;
+    }
+
+    .formularioTask label{
+        font-size: 16px;
+    }
+
+    .formularioTask form input{
+        width: 250px;
+        height: 18px;
+    }
+    
+    .formularioTask form textarea{
+        width: 250px;
+        height: 60px;
+        font-size: 15px;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        resize: none;
+    }
+
+    .formularioTask .botoesTask button{
+        margin-left: 15%;
+        height: 18px;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 767px){
+    .formularioTask{
+        width: 360px;
+        height: 560px;
+        left: 50%;
+        top: 50%;
+    }
+    .formularioTask p{
+        font-size: 15px;
+        top: 5px;
+        bottom: 2px;
+    }
+
+    .formularioTask label{
+        font-size: 24px;
+    }
+
+    .formularioTask form input{
+        width: 250px;
+        height: 28px;
+    }
+    
+    .formularioTask form textarea{
+        width: 250px;
+        height: 120px;
+        font-size: 20px;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        resize: none;
+    }
+
+    .formularioTask .botoesTask button{
+        margin-left: 15%;
+        font-size: 20px;
+        height: 22px;
     }
 }
